@@ -52,11 +52,19 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-// Form submission via EmailJS
-// EmailJS will be configured later — for now, forms use mailto fallback
+// Form submission via FormSubmit.co
+// Sends emails directly to info@arenda-k.ru
+// First submission will require email confirmation (one-time)
+const FORMSUBMIT_URL = 'https://formsubmit.co/ajax/info@arenda-k.ru';
+
 function handleFormSubmit(form, successEl) {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
+
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Отправляем...';
+        submitBtn.disabled = true;
 
         const formData = new FormData(form);
         const name = formData.get('name');
@@ -66,19 +74,30 @@ function handleFormSubmit(form, successEl) {
 
         const subject = property
             ? `Заявка на аренду: ${property}`
-            : 'Заказ звонка с сайта';
+            : 'Заказ звонка с сайта arenda-klintsy.ru';
 
-        const body = `Имя: ${name}\nТелефон: ${phone}${property ? `\nОбъект: ${property}` : ''}${message ? `\nСообщение: ${message}` : ''}`;
+        const payload = {
+            name: name,
+            phone: phone,
+            _subject: subject,
+            _template: 'table',
+            _captcha: 'false'
+        };
 
-        // Try EmailJS if configured
-        if (typeof emailjs !== 'undefined' && window.EMAILJS_SERVICE_ID) {
-            emailjs.send(window.EMAILJS_SERVICE_ID, window.EMAILJS_TEMPLATE_ID, {
-                from_name: name,
-                phone: phone,
-                property: property,
-                message: message,
-                subject: subject
-            }).then(() => {
+        if (property) payload.property = property;
+        if (message) payload.message = message;
+
+        fetch(FORMSUBMIT_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
                 form.reset();
                 if (successEl) {
                     successEl.hidden = false;
@@ -88,14 +107,22 @@ function handleFormSubmit(form, successEl) {
                         form.style.display = '';
                     }, 5000);
                 }
-            }).catch(() => {
-                // Fallback to mailto
-                window.location.href = `mailto:info@arenda-k.ru?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            });
-        } else {
-            // Mailto fallback
-            window.location.href = `mailto:info@arenda-k.ru?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        }
+                // Close modal if inside one
+                const modal = form.closest('.modal');
+                if (modal) {
+                    setTimeout(() => modal.classList.remove('active'), 2000);
+                }
+            } else {
+                alert('Произошла ошибка. Пожалуйста, позвоните нам: +7 (930) 820-09-99');
+            }
+        })
+        .catch(() => {
+            alert('Ошибка соединения. Пожалуйста, позвоните нам: +7 (930) 820-09-99');
+        })
+        .finally(() => {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        });
     });
 }
 

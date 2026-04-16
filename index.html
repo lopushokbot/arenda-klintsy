@@ -25,7 +25,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -193,8 +193,7 @@
                 <img src="images/logo.svg" alt="Союз Недвижимость — аренда помещений в Клинцах" class="header__logo-img">
             </a>
             <nav class="header__nav" id="nav">
-                <a href="#about" class="nav-link">О компании</a>
-                <a href="#advantages" class="nav-link">Преимущества</a>
+                <a href="#about" class="nav-link">О нас</a>
                 <a href="#properties" class="nav-link">Объекты</a>
                 <a href="#team" class="nav-link">Команда</a>
                 <a href="#reviews" class="nav-link">Отзывы</a>
@@ -203,7 +202,7 @@
             <div class="header__actions">
                 <a href="tel:+79308200999" class="header__phone">+7 (930) 820-09-99</a>
                 <a href="https://vk.com/arenda_klintsy" target="_blank" rel="noopener" class="header__social" aria-label="ВКонтакте">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M21.547 7H16.86c-.312 0-.577.237-.577.547v4.456c0 .31-.238.547-.548.547h-1.734c-.31 0-.548-.237-.548-.547V7.547c0-.31-.236-.547-.547-.547H7.547C7.236 7 7 7.237 7 7.547v8.906c0 .31.236.547.547.547h5.36c.31 0 .547-.237.547-.547v-1.734c0-.31.238-.548.548-.548h1.734c.31 0 .548.238.548.548v1.734c0 .31.237.547.547.547h4.716c.31 0 .547-.237.547-.547V7.547c0-.31-.237-.547-.547-.547z"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 48 48" fill="currentColor"><path d="M25.54 34.58c-10.94 0-17.18-7.5-17.44-19.98h5.48c.18 9.16 4.22 13.04 7.42 13.84V14.6h5.16v7.9c3.16-.34 6.48-3.94 7.6-7.9h5.16c-.86 4.88-4.46 8.48-7.02 9.96 2.56 1.2 6.62 4.36 8.18 10.02h-5.68c-1.22-3.8-4.26-6.74-8.24-7.14v7.14h-.62z"/></svg>
                 </a>
                 <button class="btn btn--primary btn--sm" id="callbackBtn">Заказать звонок</button>
             </div>
@@ -445,24 +444,43 @@
         </div>
     </section>
 
+    <!-- Listings on platforms -->
+    <section class="listings" id="listings">
+        <div class="container">
+            <h2 class="section-title">Подробнее о помещениях</h2>
+            <p class="section-subtitle">Смотрите актуальные предложения с&nbsp;фотографиями, планировками и&nbsp;ценами на&nbsp;популярных площадках</p>
+            <div class="listings__grid">
+                <a href="https://www.cian.ru/company/18791894/" target="_blank" rel="noopener" class="listing-card fade-in">
+                    <div class="listing-card__icon">
+                        <img src="images/logo-cian.svg" alt="ЦИАН" width="120" height="40">
+                    </div>
+                    <h3>ЦИАН</h3>
+                    <p>Коммерческая недвижимость с&nbsp;подробными описаниями, фото и&nbsp;планировками помещений</p>
+                    <span class="listing-card__link">Смотреть на ЦИАН &rarr;</span>
+                </a>
+                <a href="https://www.avito.ru/brands/i46334220/all/kommercheskaya_nedvizhimost?gdlkerfdnwq=101&page_from=from_item_card&iid=8008930392&sellerId=ad1a329158d3c7d6ffb4b693c0ae8358" target="_blank" rel="noopener" class="listing-card fade-in">
+                    <div class="listing-card__icon">
+                        <img src="images/logo-avito.svg" alt="Авито" width="120" height="40">
+                    </div>
+                    <h3>Авито</h3>
+                    <p>Актуальные объявления с&nbsp;ценами, фотографиями и&nbsp;возможностью написать напрямую</p>
+                    <span class="listing-card__link">Смотреть на Авито &rarr;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Clients -->
     <section class="clients">
         <div class="container">
             <h2 class="section-title">Наши клиенты</h2>
             <p class="section-subtitle">Более 100 компаний уже работают с нами</p>
             <div class="clients__logos">
-                <div class="client-logo client-logo--magnit">
-                    <svg viewBox="0 0 120 40" width="120" height="40"><text x="60" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="900" fill="#e30613">МАГНИТ</text></svg>
-                </div>
-                <div class="client-logo client-logo--fixprice">
-                    <svg viewBox="0 0 130 40" width="130" height="40"><text x="65" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="900" fill="#ffc300">Fix Price</text></svg>
-                </div>
-                <div class="client-logo client-logo--gloria">
-                    <svg viewBox="0 0 140 40" width="140" height="40"><text x="70" y="26" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#1a3a6b">Gloria Jeans</text></svg>
-                </div>
-                <div class="client-logo client-logo--vitafarm">
-                    <svg viewBox="0 0 130 40" width="130" height="40"><text x="65" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#2e7d32">Витафарм</text></svg>
-                </div>
+                <div class="client-logo"><img src="images/logo-magnit.svg" alt="Магнит" height="44"></div>
+                <div class="client-logo"><img src="images/logo-fixprice.svg" alt="Фикс Прайс" height="44"></div>
+                <div class="client-logo"><img src="images/logo-gloria.svg" alt="Глория Джинс" height="44"></div>
+                <div class="client-logo"><img src="images/logo-vitafarm.svg" alt="Витафарм" height="44"></div>
+                <div class="client-logo"><img src="images/logo-krasnoe.svg" alt="Красное и Белое" height="44"></div>
             </div>
         </div>
     </section>
@@ -559,7 +577,7 @@
             <h2 class="section-title">Адреса наших объектов</h2>
         </div>
         <div class="map__embed">
-            <iframe src="https://yandex.ru/map-widget/v1/?ll=32.2410%2C52.7510&z=15&l=map&pt=32.237957,52.746197,pm2blm1~32.249393,52.754281,pm2blm2~32.232123,52.752929,pm2blm3~32.236787,52.752748,pm2blm4" width="100%" height="450" frameborder="0" allowfullscreen loading="lazy" title="Карта объектов компании Союз в Клинцах"></iframe>
+            <iframe src="https://yandex.ru/map-widget/v1/?ll=32.2400%2C52.7505&z=14&l=map&pt=32.237957%2C52.746197%2Cpm2bll%7EТК Центральный рынок~32.249393%2C52.754281%2Cpm2bll%7EТАКСоюз~32.232123%2C52.752929%2Cpm2bll%7EТРЦ Европейский~32.236787%2C52.752748%2Cpm2bll%7EТРЦ Доходный" width="100%" height="450" frameborder="0" allowfullscreen loading="lazy" title="Карта объектов компании Союз в Клинцах"></iframe>
         </div>
     </section>
 
@@ -573,7 +591,16 @@
                     <div class="contact__details">
                         <a href="tel:+79308200999" class="contact__phone">+7 (930) 820-09-99</a>
                         <a href="mailto:info@arenda-k.ru" class="contact__email">info@arenda-k.ru</a>
-                        <a href="https://t.me/arendaklintsy32" target="_blank" rel="noopener" class="contact__tg">Написать в Telegram</a>
+                    </div>
+                    <div class="contact__messengers">
+                        <a href="https://vk.com/arenda_klintsy" target="_blank" rel="noopener" class="btn btn--messenger btn--vk">
+                            <svg width="20" height="20" viewBox="0 0 48 48" fill="currentColor"><path d="M25.54 34.58c-10.94 0-17.18-7.5-17.44-19.98h5.48c.18 9.16 4.22 13.04 7.42 13.84V14.6h5.16v7.9c3.16-.34 6.48-3.94 7.6-7.9h5.16c-.86 4.88-4.46 8.48-7.02 9.96 2.56 1.2 6.62 4.36 8.18 10.02h-5.68c-1.22-3.8-4.26-6.74-8.24-7.14v7.14h-.62z"/></svg>
+                            Написать в ВК
+                        </a>
+                        <a href="https://t.me/arendaklintsy32" target="_blank" rel="noopener" class="btn btn--messenger btn--tg">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0h-.056zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                            Написать в Telegram
+                        </a>
                     </div>
                 </div>
                 <form class="contact__form" id="contactForm">
@@ -581,9 +608,16 @@
                     <input type="tel" name="phone" placeholder="Телефон" required class="input">
                     <input type="hidden" name="property" id="formProperty" value="">
                     <textarea name="message" placeholder="Сообщение (необязательно)" rows="3" class="input input--textarea"></textarea>
+                    <label class="consent">
+                        <input type="checkbox" name="consent" required>
+                        <span>Я&nbsp;даю согласие на&nbsp;<a href="consent.html" target="_blank">обработку персональных данных</a> в&nbsp;соответствии с&nbsp;Федеральным законом №152-ФЗ</span>
+                    </label>
                     <button type="submit" class="btn btn--primary btn--lg btn--full">Отправить заявку</button>
-                    <p class="contact__privacy">Нажимая на&nbsp;кнопку, вы&nbsp;принимаете <a href="#">Политику конфиденциальности</a> и&nbsp;даёте согласие на&nbsp;обработку персональных данных.</p>
                 </form>
+                <div class="form-success" id="contactSuccess" hidden>
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0071e3" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    <p>Спасибо! Ваша заявка отправлена.<br>Мы свяжемся с вами в ближайшее время.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -634,17 +668,16 @@
             <form id="callbackForm">
                 <input type="text" name="name" placeholder="Ваше имя" required class="input">
                 <input type="tel" name="phone" placeholder="Телефон" required class="input">
+                <label class="consent">
+                    <input type="checkbox" name="consent" required>
+                    <span>Я&nbsp;даю согласие на&nbsp;обработку персональных данных</span>
+                </label>
                 <button type="submit" class="btn btn--primary btn--full">Перезвоните мне</button>
             </form>
             <div class="form-success" id="callbackSuccess" hidden>
                 <p>Спасибо! Мы перезвоним вам в ближайшее время.</p>
             </div>
         </div>
-    </div>
-
-    <!-- Success message for contact form -->
-    <div class="form-success" id="contactSuccess" hidden>
-        <p>Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.</p>
     </div>
 
     <script src="js/main.js"></script>

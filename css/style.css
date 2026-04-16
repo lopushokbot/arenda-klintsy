@@ -56,7 +56,7 @@ a:hover {
 
 /* === Container === */
 .container {
-    max-width: 1080px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
 }
@@ -162,14 +162,8 @@ a:hover {
 .header__inner {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    height: 64px;
-    gap: 20px;
-}
-
-.header__nav {
-    flex: 1;
-    justify-content: center;
+    height: 68px;
+    gap: 24px;
 }
 
 .header__logo {
@@ -180,19 +174,21 @@ a:hover {
 }
 
 .header__logo-img {
-    height: 36px;
+    height: 44px;
     width: auto;
 }
 
 .footer__logo-img {
-    height: 32px;
+    height: 52px;
     width: auto;
     filter: brightness(0) invert(1);
 }
 
 .header__nav {
     display: flex;
-    gap: 20px;
+    align-items: center;
+    gap: 24px;
+    margin-left: auto;
 }
 
 .nav-link {
@@ -236,10 +232,46 @@ a:hover {
     color: #0077FF;
 }
 
-.contact__tg {
-    font-size: 16px;
-    color: var(--color-accent);
-    font-weight: 500;
+.contact__messengers {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.btn--messenger {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 100px;
+    color: #fff;
+    text-decoration: none;
+    transition: all var(--transition);
+}
+
+.btn--messenger:hover {
+    transform: translateY(-2px);
+    color: #fff;
+}
+
+.btn--vk {
+    background: #0077FF;
+}
+
+.btn--vk:hover {
+    background: #0066DD;
+    box-shadow: 0 4px 14px rgba(0, 119, 255, 0.4);
+}
+
+.btn--tg {
+    background: #229ED9;
+}
+
+.btn--tg:hover {
+    background: #1E8EC4;
+    box-shadow: 0 4px 14px rgba(34, 158, 217, 0.4);
 }
 
 .header__burger {
@@ -492,7 +524,6 @@ a:hover {
     margin-top: auto;
     padding: 14px 36px;
     font-size: 16px;
-    box-shadow: 0 4px 14px rgba(0, 113, 227, 0.35);
 }
 
 /* === Clients === */
@@ -510,19 +541,25 @@ a:hover {
 }
 
 .client-logo {
-    padding: 16px 24px;
-    background: var(--color-bg);
-    border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: var(--shadow-sm);
-    min-width: 140px;
-    transition: box-shadow var(--transition);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: transform var(--transition), box-shadow var(--transition);
+    flex-shrink: 0;
 }
 
 .client-logo:hover {
+    transform: translateY(-2px);
     box-shadow: var(--shadow-md);
+}
+
+.client-logo img {
+    display: block;
+    width: 150px;
+    height: auto;
+    border-radius: var(--radius-md);
 }
 
 /* === Team === */
@@ -554,7 +591,7 @@ a:hover {
     width: 72px;
     height: 72px;
     border-radius: 50%;
-    background: var(--color-text);
+    background: var(--color-accent);
     color: #fff;
     display: flex;
     align-items: center;
@@ -849,6 +886,84 @@ a:hover {
     font-weight: 500;
 }
 
+/* === Consent checkbox === */
+.consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    line-height: 1.4;
+}
+
+.consent input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-top: 1px;
+    accent-color: var(--color-accent);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.consent a {
+    color: var(--color-accent);
+}
+
+/* === Listings (CIAN/Avito) === */
+.listings {
+    padding: 80px 0;
+}
+
+.listings__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.listing-card {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 32px;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    transition: all var(--transition);
+}
+
+.listing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-accent);
+}
+
+.listing-card__icon {
+    margin-bottom: 20px;
+}
+
+.listing-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 8px;
+}
+
+.listing-card p {
+    font-size: 15px;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.listing-card__link {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-accent);
+}
+
 /* === Animations === */
 .fade-in {
     opacity: 0;
@@ -895,6 +1010,10 @@ a:hover {
         grid-template-columns: 1fr;
     }
 
+    .listings__grid {
+        grid-template-columns: 1fr;
+    }
+
     .contact__inner {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -914,12 +1033,14 @@ a:hover {
     .header__nav {
         display: none;
         position: fixed;
-        top: 64px;
+        top: 68px;
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(255,255,255,0.98);
+        z-index: 150;
+        background: #ffffff;
         backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -947,7 +1068,16 @@ a:hover {
     }
 
     .hero__title {
-        font-size: 30px;
+        font-size: 34px;
+    }
+
+    .contact__messengers {
+        flex-wrap: wrap;
+    }
+
+    .btn--messenger {
+        width: 100%;
+        justify-content: center;
     }
 
     .hero__subtitle {

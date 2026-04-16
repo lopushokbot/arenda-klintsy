@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50">
+  <rect width="160" height="50" rx="4" fill="#1a3a6b"/>
+  <text x="80" y="27" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#fff" letter-spacing="0.5">Gloria</text>
+  <text x="80" y="43" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#fff" letter-spacing="0.5">Jeans</text>
+</svg>
