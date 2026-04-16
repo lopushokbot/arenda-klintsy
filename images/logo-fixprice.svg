@@ -1,4 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50">
-  <rect width="160" height="50" rx="4" fill="#00994d"/>
-  <text x="80" y="33" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="900" fill="#ffc300" letter-spacing="0.5">Fix Price</text>
+  <!-- Price tag shape: body + notch on left -->
+  <path d="M20,0 L156,0 Q160,0 160,4 L160,46 Q160,50 156,50 L20,50 L4,25 Z" fill="#FFD300"/>
+  <circle cx="22" cy="25" r="5" fill="white"/>
+  <text x="90" y="22" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="13" font-weight="900" fill="#1A1A1A" letter-spacing="1">fix</text>
+  <text x="90" y="39" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="13" font-weight="900" fill="#E8001C" letter-spacing="1">price</text>
 </svg>
