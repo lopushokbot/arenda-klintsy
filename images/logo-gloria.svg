@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 56" width="200" height="56">
+  <!-- Star accent -->
+  <polygon points="100,6 102.4,13.4 110,13.4 104,18 106.4,25.4 100,21 93.6,25.4 96,18 90,13.4 97.6,13.4"
+           fill="#1B3A6B"/>
+  <!-- GLORIA -->
+  <text x="100" y="41" text-anchor="middle"
+        font-family="Arial Black, Arial, sans-serif"
+        font-size="14" font-weight="900"
+        fill="#1B3A6B" letter-spacing="3">GLORIA JEANS</text>
+</svg>

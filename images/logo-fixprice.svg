@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 56" width="200" height="56">
+  <!-- Tag body -->
+  <path d="M10,4 L170,4 Q190,4 190,28 Q190,52 170,52 L10,52 Q4,52 4,46 L4,34 L18,28 L4,22 L4,10 Q4,4 10,4 Z" fill="#FFD300"/>
+  <!-- Hole -->
+  <circle cx="14" cy="28" r="5" fill="white"/>
+  <!-- fix -->
+  <text x="110" y="24" text-anchor="middle"
+        font-family="Arial Black, Arial, sans-serif"
+        font-size="15" font-weight="900"
+        fill="#1A1A1A" letter-spacing="1">fix</text>
+  <!-- price -->
+  <text x="110" y="42" text-anchor="middle"
+        font-family="Arial Black, Arial, sans-serif"
+        font-size="15" font-weight="900"
+        fill="#E8001C" letter-spacing="1">price</text>
+</svg>
