@@ -1,4 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40">
-  <rect width="120" height="40" rx="8" fill="#00AAFF"/>
-  <text x="60" y="27" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="800" fill="#fff" letter-spacing="1">Авито</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 96" width="340" height="96">
+  <!-- Purple circle (top-left, small) -->
+  <circle cx="26" cy="22" r="16" fill="#9747FF"/>
+  <!-- Blue circle (top-right, medium) -->
+  <circle cx="56" cy="14" r="24" fill="#29C0FF"/>
+  <!-- Green circle (bottom-left, largest) -->
+  <circle cx="22" cy="68" r="28" fill="#00D65B"/>
+  <!-- Red/coral circle (bottom-right, medium) -->
+  <circle cx="58" cy="74" r="18" fill="#FF385C"/>
+  <!-- "Avito" text -->
+  <text x="96" y="76"
+        font-family="Arial Black, Arial, sans-serif"
+        font-size="62" font-weight="900"
+        fill="#000000" letter-spacing="-1">Avito</text>
 </svg>
