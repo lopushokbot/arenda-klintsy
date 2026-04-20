@@ -1,7 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50">
-  <!-- Price tag shape: body + notch on left -->
-  <path d="M20,0 L156,0 Q160,0 160,4 L160,46 Q160,50 156,50 L20,50 L4,25 Z" fill="#FFD300"/>
-  <circle cx="22" cy="25" r="5" fill="white"/>
-  <text x="90" y="22" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="13" font-weight="900" fill="#1A1A1A" letter-spacing="1">fix</text>
-  <text x="90" y="39" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="13" font-weight="900" fill="#E8001C" letter-spacing="1">price</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" fill="none">
+  <!-- Circle mark -->
+  <circle cx="110" cy="110" r="98" fill="#1E3A8A"/>
+  <circle cx="110" cy="110" r="86" fill="#7AC143"/>
+  <circle cx="110" cy="110" r="66" fill="#FFFFFF"/>
+  <!-- Letter F -->
+  <path d="M82 66 H150 V90 H104 V104 H138 V126 H104 V158 H82 Z" fill="#1E3A8A"/>
+  <!-- FIX wordmark -->
+  <text x="230" y="152" font-family="'Helvetica Neue',Arial,sans-serif" font-size="140" font-weight="900" fill="#1E3A8A" letter-spacing="-4">FiX</text>
+  <!-- price wordmark -->
+  <text x="430" y="132" font-family="'Helvetica Neue',Arial,sans-serif" font-size="72" font-weight="700" fill="#7AC143" letter-spacing="-1">price</text>
+  <!-- dots -->
+  <circle cx="448" cy="168" r="10" fill="#7AC143"/>
+  <circle cx="478" cy="168" r="10" fill="#7AC143"/>
+  <circle cx="508" cy="168" r="10" fill="#1E3A8A"/>
 </svg>

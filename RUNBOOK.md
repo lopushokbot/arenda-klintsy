@@ -1,11 +1,24 @@
 # Runbook — arenda-klintsy.ru
 
+## Live URLs
+- GitHub Pages (default): https://lopushokbot.github.io/arenda-klintsy/
+- Custom domain (when DNS is ready): https://arenda-klintsy.ru/
+- Repo: https://github.com/lopushokbot/arenda-klintsy
+
 ## Deployment
 
-### GitHub Pages Setup
-1. Push to `lopushokbot/arenda-klintsy` on GitHub
-2. Go to Settings → Pages → Source: Deploy from branch (main)
-3. CNAME file is already in repo for custom domain
+### Push workflow
+```
+git add -A
+git commit -m "<short message>"
+git push origin main
+```
+Pages rebuild is automatic on push to `main` (takes ~1 min).
+
+### GitHub Pages Setup (already done)
+- Source: `main` branch, `/` path
+- HTTPS enforced
+- CNAME file currently removed until DNS migrates
 
 ### DNS Setup (at domain registrar)
 Point arenda-klintsy.ru to GitHub Pages:
@@ -48,3 +61,15 @@ Wait for DNS propagation (up to 48h), then enable "Enforce HTTPS" in GitHub Page
 2. Place in `images/` folder
 3. Replace placeholder divs in property cards with `<img>` tags
 4. Add descriptive `alt` text in Russian for SEO
+
+## Updating Yandex Map / Property Links
+Property coordinates and Yandex org IDs are listed in `CLAUDE.md`. When a pin is wrong:
+1. Get the fresh Yandex Maps URL for the org (open it on yandex.com/maps and copy the share link)
+2. Extract `ll=<lon>,<lat>` or `poi[point]=<lon>,<lat>` from the URL
+3. Update two spots in `index.html`:
+   - `property-card__address` href and `property-card__map-link` href on the matching card
+   - The `pt=` parameter of the map iframe near `<section class="map">`
+4. Also update the coord in `CLAUDE.md`
+
+## Changelog
+- **2026-04-20** — Replaced Cian/Avito/Magnit/Fix Price/Gloria Jeans/К&Б logos with official SVGs; added Yandex Maps links per property card; rebuilt bottom map iframe with corrected coordinates for all 4 centers.

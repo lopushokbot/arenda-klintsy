@@ -32,3 +32,10 @@ Forms use EmailJS (client-side) with mailto fallback. EmailJS credentials need t
 - Yandex Maps, 2GIS, CIAN, Avito cross-linked in sameAs
 - robots.txt + sitemap.xml
 - Semantic HTML5 markup
+
+## Yandex Maps — Property Coordinates (used in iframe + card links)
+- ТК «Центральный рынок» (Октябрьская, 5): `32.237956, 52.746198` — org 53940329825
+- ТАК «Союз» (Дзержинского, 24): `32.249084, 52.756619` — org 26201175291
+- ТРЦ «Европейский» (пр-т Ленина, 13): `32.232199, 52.752876` — org 111336099468
+- ТРЦ «Доходный» (Октябрьская, 40а): `32.236817, 52.752724` — org 90976081696
+- Map iframe center: `32.240642, 52.751409` at `z=14`
