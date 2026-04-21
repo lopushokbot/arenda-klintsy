@@ -281,7 +281,12 @@ a:hover {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 4px;
+    width: 44px;
+    height: 44px;
+    padding: 12px 10px;
+    align-items: center;
+    justify-content: center;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .header__burger span {
@@ -303,6 +308,33 @@ a:hover {
 
 .header__burger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.nav-backdrop {
+    display: none;
+    position: fixed;
+    top: 68px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 140;
+    background: rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    transition: opacity var(--transition);
+    pointer-events: none;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+body.menu-open .header {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+.header__actions--mobile {
+    display: none;
 }
 
 /* === Hero === */
@@ -1057,7 +1089,7 @@ a.property-card__address:hover {
     }
 
     .header__nav {
-        display: none;
+        display: flex;
         position: fixed;
         top: 68px;
         left: 0;
@@ -1068,25 +1100,69 @@ a.property-card__address:hover {
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 32px;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 4px;
+        padding: 24px 24px 32px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .header__nav.active {
-        display: flex;
+        transform: translateX(0);
     }
 
     .header__nav .nav-link {
-        font-size: 20px;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 14px 8px;
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .header__nav .nav-link:last-of-type {
+        border-bottom: none;
     }
 
     .header__actions {
         display: none;
     }
 
+    .header__actions--mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 24px;
+        padding-top: 24px;
+        border-top: 1px solid var(--color-border);
+    }
+
+    .header__actions--mobile .header__phone {
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        padding: 14px;
+        min-height: 48px;
+    }
+
+    .header__actions--mobile .btn {
+        width: 100%;
+        min-height: 48px;
+        font-size: 16px;
+    }
+
     .header__burger {
         display: flex;
+    }
+
+    .nav-backdrop.active {
+        display: block;
+        opacity: 1;
+        pointer-events: auto;
     }
 
     .hero {
@@ -1099,6 +1175,7 @@ a.property-card__address:hover {
 
     .contact__messengers {
         flex-wrap: wrap;
+        gap: 8px;
     }
 
     .btn--messenger {
@@ -1136,7 +1213,58 @@ a.property-card__address:hover {
         grid-template-columns: 1fr;
     }
 
+    .team-card__avatar {
+        width: 56px;
+        height: 56px;
+        font-size: 18px;
+    }
+
     .footer__inner {
         grid-template-columns: 1fr;
     }
+
+    .map__embed iframe.map__iframe {
+        height: auto;
+        aspect-ratio: 4 / 3;
+        max-height: 70vh;
+    }
+
+    .modal__content {
+        padding: 24px 20px;
+    }
+
+    .modal__close {
+        width: 44px;
+        height: 44px;
+        top: 8px;
+        right: 8px;
+        font-size: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .review-card {
+        padding: 20px;
+    }
+
+    .client-logo img {
+        width: 110px;
+    }
+
+    .consent {
+        font-size: 14px;
+        gap: 12px;
+    }
+
+    .consent input[type="checkbox"] {
+        width: 22px;
+        height: 22px;
+        margin-top: 0;
+    }
+}
+
+html {
+    overflow-x: hidden;
 }

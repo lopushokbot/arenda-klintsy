@@ -72,4 +72,5 @@ Property coordinates and Yandex org IDs are listed in `CLAUDE.md`. When a pin is
 4. Also update the coord in `CLAUDE.md`
 
 ## Changelog
+- **2026-04-21** — Mobile UX pass: burger tap target → 44×44 px, menu panel slides in full-viewport with `body.menu-open` scroll-lock, added tap-to-close backdrop + Escape key, moved phone + «Заказать звонок» into the mobile panel, fixed backdrop-filter containing-block bug on `.header`, responsive map iframe (aspect-ratio 4/3, max-height 70vh), modal close button ≥44 px, consent checkbox 22 px, review-card padding reduced, client logos 110 px on mobile, team avatars 56 px, `html { overflow-x: hidden }` safety net.
 - **2026-04-20** — Replaced Cian/Avito/Magnit/Fix Price/Gloria Jeans/К&Б logos with official SVGs; added Yandex Maps links per property card; rebuilt bottom map iframe with corrected coordinates for all 4 centers.

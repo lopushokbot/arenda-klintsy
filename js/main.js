@@ -1,27 +1,40 @@
 // Mobile navigation
 const burger = document.getElementById('burger');
 const nav = document.getElementById('nav');
+const navBackdrop = document.getElementById('navBackdrop');
 
-burger.addEventListener('click', () => {
-    burger.classList.toggle('active');
-    nav.classList.toggle('active');
+function setMenu(open) {
+    burger.classList.toggle('active', open);
+    nav.classList.toggle('active', open);
+    navBackdrop.classList.toggle('active', open);
+    document.body.classList.toggle('menu-open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+}
+
+burger.addEventListener('click', () => setMenu(!nav.classList.contains('active')));
+navBackdrop.addEventListener('click', () => setMenu(false));
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && nav.classList.contains('active')) setMenu(false);
 });
 
 // Close nav on link click
 nav.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        burger.classList.remove('active');
-        nav.classList.remove('active');
-    });
+    link.addEventListener('click', () => setMenu(false));
 });
 
 // Callback modal
 const callbackBtn = document.getElementById('callbackBtn');
+const callbackBtnMobile = document.getElementById('callbackBtnMobile');
 const callbackModal = document.getElementById('callbackModal');
 
-callbackBtn.addEventListener('click', () => {
+function openCallback() {
+    setMenu(false);
     callbackModal.classList.add('active');
-});
+}
+
+callbackBtn.addEventListener('click', openCallback);
+if (callbackBtnMobile) callbackBtnMobile.addEventListener('click', openCallback);
 
 callbackModal.querySelector('.modal__overlay').addEventListener('click', () => {
     callbackModal.classList.remove('active');
